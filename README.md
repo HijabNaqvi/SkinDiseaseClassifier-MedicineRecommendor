@@ -1,7 +1,4 @@
 # SkinDiseaseClassifier-MedicineRecommendor
-Here's a polished **README.md** for your project based on the notebook you uploaded:
-
----
 
 ## 🧴 Skin Disease Classifier & OTC Medicine Guide
 
@@ -87,13 +84,3 @@ skin-disease-classifier/
 * Integrate **camera support** for real-time capture
 * Extend to **multilingual** medicine recommendations
 * Collect more diverse data for improved generalization
-
----
-
-### 📜 License
-
-MIT License
-
----
-
-Let me know if you also want me to create a separate `requirements.txt` or add deployment instructions.
