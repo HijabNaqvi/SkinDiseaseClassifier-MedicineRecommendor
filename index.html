@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skin Disease Classifier & Medicine Recommender</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="center-text">Skin Disease Classifier & Medicine Recommender</h1>
+            <br><br>
+            <p class="center-text">This smart web app detects common skin diseases from uploaded images using deep learning. It provides instant predictions along with OTC medicine suggestions, offering quick help when professional care isn’t immediately accessible.</p>
+            <br><br>
+        </header>
+
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <label for="image" class="file-label">Upload a clear skin image:</label> <br>
+            <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage(event)">
+            <img id="preview" src="#" alt="Image Preview" class="preview-img">
+            <br>
+            <button type="submit" name="action" value="predict" class="predict-btn">Predict</button>
+        </form>
+        <br>
+
+        {% if prediction %}
+            <div class="result-card">
+                {% if prediction.image_path %}
+                    <img src="{{ url_for('static', filename=prediction.image_path.split('/')[-1]) }}" alt="Uploaded Image" class="result-img">
+                {% endif %}
+
+                {% if prediction.disease %}
+                    <h3>Disease Detected: <span class="highlight">{{ prediction.disease }}</span></h3>
+                    <p><strong>Recommended OTC Medicine:</strong> <span class="highlight">{{ prediction.otc }}</span></p>
+                    <p><strong>Notes:</strong> {{ prediction.notes }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById('preview');
+                    preview.src = e.target.result;
+                    preview.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+<footer class="footer">
+  <p>© 2025 Hijab Zahra. This is my Final Year Project (FYP) for BS IT, under the supervision of Dr. Imran Mumtaz.</p>
+  <p>All rights reserved. For any queries, contact: hijab5zahra7@gmail.com</p>
+</footer>
+</html>

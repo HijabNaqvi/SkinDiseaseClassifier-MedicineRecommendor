@@ -1,0 +1,114 @@
+body {
+    font-family: 'Times New Roman', sans-serif;
+    background: #f2f6fa;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0 20px;
+    color: #333;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 900px;
+    margin: 10px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-image: url('/static/bg.avif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.footer {
+  text-align: center;
+  padding: 15px 15px;
+  font-size: 14px;
+  color: #666;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  background-color: #f0f0f0; 
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+header h1 {
+    font-size: 40px;
+    color: #2a7f62;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+header p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.file-label {
+    font-weight: 600;
+}
+
+input[type="file"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.preview-img {
+    max-width: 300px;
+    display: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0 20px;
+}
+
+.predict-btn {
+    padding: 10px 20px;
+    background: #2a7f62;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.predict-btn:hover {
+    background: #256d55;
+}
+
+.result-card {
+    margin-top: 30px;
+    background: #fefefe;
+    padding: 20px;
+    border-left: 5px solid #2a7f62;
+    border-radius: 10px;
+}
+
+.result-img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #2a7f62;
+    font-weight: 600;
+}
